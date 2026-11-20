@@ -1,0 +1,16 @@
+services:
+  watchtower:
+    build: .
+    restart: unless-stopped
+    # Only reachable on the server itself; put Tailscale or an HTTPS proxy in front, never the open internet.
+    ports:
+      - "127.0.0.1:8778:8778"
+    volumes:
+      - watchtower-data:/data
+    environment:
+      WATCHTOWER_AWS_REGION: us-west-2
+      WATCHTOWER_CLOUDTRAIL_REGIONS: us-west-2,us-east-1
+      WATCHTOWER_LOG_BUCKET: example-security-logs-111122223333
+      WATCHTOWER_AWS_ACCOUNT: "111122223333"
+volumes:
+  watchtower-data:

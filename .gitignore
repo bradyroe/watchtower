@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.log
+data/
+*.db
+*.db-shm
+*.db-wal
+FIRST-LOGIN.txt
+discord_webhook.txt
+*.bak-*
