@@ -9,6 +9,14 @@ work real triage end to end.
 Built with AI tools. I planned it, directed the build, and tested it. It runs against a real AWS account in
 private use; this repository ships with fake demo data only.
 
+![Overview: events by source, open offenses ranked by magnitude, top actors and IPs](docs/screenshots/overview.png)
+
+| Offense detail | Log activity | Training drills |
+|---|---|---|
+| ![An offense with magnitude, MITRE technique and triage](docs/screenshots/offense-detail.png) | ![Normalized events from every source](docs/screenshots/log-activity.png) | ![Graded practice attacks](docs/screenshots/drills.png) |
+
+All screenshots are demo mode: made-up users and documentation IP ranges.
+
 ## Run the demo
 
 Demo mode is the default. It loads about 1,800 generated events (made-up users, RFC 5737 documentation
